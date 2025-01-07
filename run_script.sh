@@ -1,7 +1,7 @@
 qemu-system-riscv64 -machine	 virt \
 		    -cpu 	 rv64 \
 		    -m		 8G   \
-		    -smp	 8    \
+		    -smp	 9   \
 		    -device	 virtio-blk-device,drive=hd -drive file=ubunturv.img,if=none,id=hd \
 		    -device	 virtio-net-device,netdev=net -netdev user,id=net,hostfwd=tcp::2222-:22 \
 		    -bios	/usr/lib/riscv64-linux-gnu/opensbi/generic/fw_jump.elf  \
